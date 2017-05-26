@@ -1,6 +1,6 @@
 {
   "name": "@themarshalsgroup/ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Material design styles for The Marshals Group projects",
   "main": "index.js",
   "scripts": {
