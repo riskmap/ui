@@ -1,0 +1,36 @@
+$image-cover--min-height: 35rem;
+
+.image-cover {
+  overflow: hidden;
+
+  .image-cover--inner {
+    background-size: cover;
+    min-height: 100%;
+  }
+
+  &.image-cover--lead {
+    margin-top: -#{_get($--grid, 'margin')};
+
+    .image-cover--inner {
+      min-height: $image-cover--min-height;
+
+      @include media-breakpoint-down(lg) {
+        min-height: $image-cover--min-height * 0.8;
+      }
+
+      @include media-breakpoint-down(md) {
+        min-height: $image-cover--min-height * 0.6;
+      }
+
+      @include media-breakpoint-down(sm) {
+        min-height: $image-cover--min-height * 0.5;
+      }
+
+      @include media-breakpoint-down(xs) {
+        min-height: $image-cover--min-height * 0.33;
+      }
+
+    }
+
+  }
+}

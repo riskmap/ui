@@ -1,0 +1,61 @@
+$table--item-pad-v: _get($--tables, 'item-vertical-padding');
+$table--item-pad-h: _get($--tables, 'item-horizontal-padding');
+
+.table--container {
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+table {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 100%;
+  thead {
+    border-bottom: 1px solid darken(color('lt-gray'), 5%);
+    background-color: color('gray');
+    color: color('yellow');
+    th {
+      @include set-font('display');
+    }
+  }
+  tbody {
+    background-color: color(white);
+  }
+  th, td {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    flex-basis: 0;
+    word-break: break-word;
+    min-width: 0px;
+  }
+  tr {
+    display: flex;
+    flex-flow: row nowrap;
+    &:not(:last-of-type) {
+      // border-bottom: 1px solid color('mid-gray');
+      td {
+        border-bottom: 1px solid darken(color('lt-gray'), 5%);
+      }
+    }
+  }
+  thead, tbody {
+    &.padding--xs {
+      th, td { padding: nth($table--item-pad-v, 1) nth($table--item-pad-h, 1); }
+    }
+    &.padding--sm {
+      th, td { padding: nth($table--item-pad-v, 2) nth($table--item-pad-h, 2); }
+    }
+    &.padding--md {
+      th, td { padding: nth($table--item-pad-v, 3) nth($table--item-pad-h, 3); }
+    }
+    &.padding--lg {
+      th, td { padding: nth($table--item-pad-v, 4) nth($table--item-pad-h, 4); }
+    }
+    &.padding--xl {
+      th, td { padding: nth($table--item-pad-v, 5) nth($table--item-pad-h, 5); }
+    }
+  }
+}

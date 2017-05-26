@@ -1,0 +1,93 @@
+$panel--header-pad-h: _get($--panels, 'header-horizontal-padding');
+$panel--header-font-size: _get($--panels, 'header-font-size');
+$panel--item-title-pad-h: _get($--panels, 'item-title-horizontal-padding');
+$panel--item-pad-v: _get($--panels, 'item-vertical-padding');
+$panel--item-pad-h: _get($--panels, 'item-horizontal-padding');
+
+.panel {
+  background-color: _get($--panels, 'background-color');
+  border-radius: _get($--panels, 'border-radius');
+  overflow: hidden;
+  @extend .depth--#{_get($--panels, 'box-shadow')};
+
+  .panel--header, .panel--item .panel--item-title {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    i {
+      width: 1em;
+      margin-left: -.5em;
+      margin-right: .5em;
+    }
+
+  }
+
+  .panel--header {
+    height: _get($--panels, 'header-height');
+    color: _get($--panels, 'header-color');
+    background-color: _get($--panels, 'header-background-color');
+    box-shadow: _get($--panels, 'header-box-shadow');
+    @extend .font--#{_get($--panels, 'header-font')};
+    font-size: _get($--panels, 'header-font-size');
+
+    &.padding--xs { padding: 0 nth($panel--header-pad-h, 1); }
+    &.padding--sm { padding: 0 nth($panel--header-pad-h, 2); }
+    &.padding--md { padding: 0 nth($panel--header-pad-h, 3); }
+    &.padding--lg { padding: 0 nth($panel--header-pad-h, 4); }
+    &.padding--xl { padding: 0 nth($panel--header-pad-h, 5); }
+
+    &.font-size--xs { font-size: nth($panel--header-font-size, 1); }
+    &.font-size--sm { font-size: nth($panel--header-font-size, 2); }
+    &.font-size--md { font-size: nth($panel--header-font-size, 3); }
+    &.font-size--lg { font-size: nth($panel--header-font-size, 4); }
+    &.font-size--xl { font-size: nth($panel--header-font-size, 5); }
+
+  }
+
+  .panel--item .panel--item-title {
+    height: _get($--panels, 'item-title-height');
+    color: _get($--panels, 'item-title-color');
+    background-color: _get($--panels, 'item-title-background-color');
+    box-shadow: _get($--panels, 'item-title-box-shadow');
+    @extend .font--#{_get($--panels, 'item-title-font')};
+    font-size: _get($--panels, 'item-title-font-size');
+
+    &.padding--xs { padding: 0 nth($panel--item-title-pad-h, 1); }
+    &.padding--sm { padding: 0 nth($panel--item-title-pad-h, 2); }
+    &.padding--md { padding: 0 nth($panel--item-title-pad-h, 3); }
+    &.padding--lg { padding: 0 nth($panel--item-title-pad-h, 4); }
+    &.padding--xl { padding: 0 nth($panel--item-title-pad-h, 5); }
+
+    &.font-size--xs { font-size: nth($panel--header-font-size, 1); }
+    &.font-size--sm { font-size: nth($panel--header-font-size, 2); }
+    &.font-size--md { font-size: nth($panel--header-font-size, 3); }
+    &.font-size--lg { font-size: nth($panel--header-font-size, 4); }
+    &.font-size--xl { font-size: nth($panel--header-font-size, 5); }
+
+  }
+
+  .panel--header {
+    .panel--header-close {
+      flex-order: 99;
+    }
+  }
+
+  .panel--item {
+    .panel--item-content {
+      overflow: none;
+      color: _get($--panels, 'item-color');
+      background-color: _get($--panels, 'item-background-color');
+
+      &.padding--xs { padding: nth($panel--item-pad-v, 1) nth($panel--item-pad-h, 1); }
+      &.padding--sm { padding: nth($panel--item-pad-v, 2) nth($panel--item-pad-h, 2); }
+      &.padding--md { padding: nth($panel--item-pad-v, 3) nth($panel--item-pad-h, 3); }
+      &.padding--lg { padding: nth($panel--item-pad-v, 4) nth($panel--item-pad-h, 4); }
+      &.padding--xl { padding: nth($panel--item-pad-v, 5) nth($panel--item-pad-h, 5); }
+
+      .panel--divider {
+        height: _get($--panels, 'divider-height');
+        background-color: _get($--panels, 'divider-color');
+      }
+    }
+  }
+}

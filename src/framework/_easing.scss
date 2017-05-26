@@ -1,0 +1,19 @@
+//----------------------------------------------------------------------
+
+// Ease
+//
+// Easings are defined in config and can be accessed using the ease(name) function.
+// Direction can be in, out or in-out
+
+@function ease($name: cubic, $dir: in-out, $ease: _get($--easing, $name)) {
+  @if $ease == null {
+    @error "Easing '#{$name}' isn't defined."
+  } @else {
+    $bezier: _get($ease, $dir);
+    @if $bezier == null {
+      @error "Direction '#{$dir}' not defined for ease '#{$name}'."
+    } @else {
+      @return $bezier;
+    }
+  }
+}

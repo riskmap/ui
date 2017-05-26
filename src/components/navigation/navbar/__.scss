@@ -1,0 +1,8 @@
+.navbar {
+  position: fixed;
+  z-index: 1997;
+  top: 0; left: 0; width: 100%;
+  height: _get($--navbar, 'height');
+  background-color: _get($--navbar, 'background-color');
+  color: _get($--navbar, 'color');
+}

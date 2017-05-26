@@ -1,0 +1,60 @@
+$panel--collapsible-item-title-pad-h: _get($--panels, 'collapsible-item-title-horizontal-padding');
+
+.panel--collapsible {
+
+  .panel--collapsible-body {
+    overflow: hidden;
+    color: _get($--panels, 'collapsible-body-color');
+    background-color: _get($--panels, 'collapsible-body-background-color');
+    .cp-Panel-body-inner > .panel--item-content {
+      background-color: _get($--panels, 'collapsible-item-background-color');
+    }
+    .liquid-child .panel--content { position: relative; }
+  }
+
+  & > .panel--item {
+    &:not(:last-of-type) {
+      .panel--collapsible-body {
+        &.cp-is-open {
+          border-bottom: 1px solid darken(color('lt-gray'), 5%);
+        }
+      }
+    }
+  }
+
+  .panel--item-title {
+    i {
+      transform: rotate(-90deg);
+      transition: transform .2s ease('jump', 'out');
+    }
+    &.cp-is-open {
+      color: white;
+      i {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .panel--item .panel--item-title {
+    height: _get($--panels, 'collapsible-item-title-height');
+    color: _get($--panels, 'collapsible-item-title-color');
+    background-color: _get($--panels, 'collapsible-item-title-background-color');
+    box-shadow: _get($--panels, 'collapsible-item-title-box-shadow');
+    @extend .font--#{_get($--panels, 'collapsible-item-title-font')};
+    font-size: _get($--panels, 'collapsible-item-title-font-size');
+
+    &.padding--xs { padding: 0 nth($panel--collapsible-item-title-pad-h, 1); }
+    &.padding--sm { padding: 0 nth($panel--collapsible-item-title-pad-h, 2); }
+    &.padding--md { padding: 0 nth($panel--collapsible-item-title-pad-h, 3); }
+    &.padding--lg { padding: 0 nth($panel--collapsible-item-title-pad-h, 4); }
+    &.padding--xl { padding: 0 nth($panel--collapsible-item-title-pad-h, 5); }
+
+    &:hover {
+      color: _get($--panels, 'collapsible-item-title-hover-color');
+      background-color: _get($--panels, 'collapsible-item-title-hover-background-color');
+      box-shadow: _get($--panels, 'collapsible-item-title-hover-box-shadow');
+    }
+
+  }
+
+}

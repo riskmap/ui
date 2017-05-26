@@ -1,0 +1,5 @@
+.transition--fast { transition-duration: .25s !important; }
+.transition--slow { transition-duration: .75s !important; }
+
+@import 'fade';
+@import 'fly-down';

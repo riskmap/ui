@@ -1,0 +1,30 @@
+// Remove default styles from button
+button {
+  border: none;
+  padding: 0 0 0 0;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  font-style: inherit;
+
+  &:focus { outline: 0; }
+
+}
+
+@import 'default';
+
+// Dark
+@include btn-style(
+  'dark', // Name
+  (color('white'), color('black')), // Normal (color, background)
+  (color('white'), lighten(color('black'), 20%)) // Default Hover (color, background)
+);
+
+// Light
+@include btn-style(
+  'light', // Name
+  (color('black'), color('white')), // Normal (color, background)
+  (color('black'), darken(color('white'), 10%)) // Hover (color, background)
+);

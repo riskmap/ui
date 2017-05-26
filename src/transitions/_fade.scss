@@ -1,0 +1,28 @@
+@mixin transition--fade($name: 'transition--fade', $speed: .5s) {
+
+  .#{$name}-enter {
+    opacity: 0.01;
+
+    &.#{$name}-enter-active {
+      opacity: 1;
+
+      transition-property: opacity;
+      transition-duration: $speed;
+      transition-timing-function: ease-in;
+    }
+  }
+
+  .#{$name}-leave {
+    opacity: 1;
+    &.#{$name}-leave-active {
+      opacity: 0.01;
+
+      transition-property: opacity;
+      transition-duration: $speed;
+      transition-timing-function: ease-in;
+    }
+  }
+
+}
+
+@include transition--fade();

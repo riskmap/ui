@@ -1,0 +1,213 @@
+$--grid: (
+  // Set the number of columns you want to use on your layout.
+  columns: 12,
+  // Set the gutter between columns.
+  gutter: 1rem,
+  // Set a margin for the container sides.
+  margin: 2rem,
+  // Define breakpoints.
+  breakpoints: (
+    xs: default, // Less than 576px wide - Portrait phones
+    sm: 576px 540px, // Between 576 and 767 - Landscape Phones
+    md: 768px 720px, // Between 768 and 991 - Tablets
+    lg: 992px 960px, // Between 992 and 1199 - Desktops
+    xl: 1200px 1140px // 1200 upwards - Extra large devices
+  ),
+  // Max width of container
+  max-width: 1024px
+);
+
+$--font-faces: (
+  'roboto': (
+    family: 'Roboto',
+    type: sans-serif
+  )
+);
+
+$--font-styles: (
+  'display': (
+    family: font('roboto'),
+    style: normal,
+    weight: 300,
+    letter-spacing: -.02em
+  ),
+  'subheader': (
+    family: font('roboto'),
+    style: normal,
+    weight: 500,
+    letter-spacing: -0.01em
+  ),
+  'content': (
+    family: font('roboto'),
+    transform: inherit,
+    weight: 400,
+    letter-spacing: 0em
+  )
+);
+
+$--type: (
+  // HTML Base Font
+  // @params font-size, line-height, responsive-ratio
+  html: (14px, 150%, 0.95),
+
+  // Headers
+  // @params font-size, line-height, responsive-ratio
+  headers: (
+    h1: (3.33rem, 110%, 0.6),
+    h2: (2rem, 120%, 0.8),
+    h3: (1.66rem, 130%, 0.85),
+    h4: (1.33rem, 140%, 0.9),
+    h5: (1.2rem, 160%, 0.95),
+    h6: (1rem, 180%, 1)
+  ),
+
+  // Paragraph
+  // @params font-size, line-height, padding-bottom
+  p: (1rem, 200%, 1em),
+
+  // Small
+  // @params font-size
+  small: 0.9em
+);
+
+$--colors: (
+  // Monochrome
+  'white': white,
+  'black': black,
+
+  // Mid tones
+  'gray': #2C2C2C,
+  'lt-gray': darken(white, 5%),
+  'mid-gray': darken(white, 33%),
+
+  // Success, Error & Warning
+  'green': #2ecc71,
+  'red': #EF2038,
+  'yellow': #FFDF2E,
+
+  // Services
+  'twitter': #00aced,
+  'facebook': #3b5998,
+  'google-plus': #dd4b39,
+  'linkedin': #007bb6,
+  'instagram': #517fa4,
+  'pinterest': #cb2027,
+  'youtube': #bb0000,
+  'dribbble': #ea4c89,
+  'behance': #053eff,
+  'github': #333333,
+  'vimeo': #1ab7ea
+);
+
+$--main: (
+  body-color: _get($--colors, 'black'),
+  body-background-color: _get($--colors, 'white'),
+  selection-background-color: _get($--colors, 'black'),
+  selection-color: _get($--colors, 'white')
+);
+
+$--easing: (
+  'cubic': (
+    in: cubic-bezier(0.550, 0.055, 0.675, 0.190),
+    out: cubic-bezier(0.215, 0.610, 0.355, 1.000),
+    in-out: cubic-bezier(0.645, 0.045, 0.355, 1.000)
+  ),
+  'expo': (
+    in: cubic-bezier(0.950, 0.050, 0.795, 0.035),
+    out: cubic-bezier(0.190, 1.000, 0.220, 1.000),
+    in-out: cubic-bezier(1.000, 0.000, 0.000, 1.000)
+  ),
+  'back': (
+    in: cubic-bezier(0.600, -0.280, 0.735, 0.045),
+    out: cubic-bezier(0.175, 0.885, 0.320, 1.275),
+    in-out: cubic-bezier(0.680, -0.550, 0.265, 1.550)
+  ),
+  'jump': (
+    out: cubic-bezier(.25,1.4,.55,.99),
+    in-out: cubic-bezier(.87,-.41,.19,1.44),
+  ),
+  'leap': (
+    out: cubic-bezier(.25,1.9,.55,.99),
+    in-out: cubic-bezier(.78,-0.81,.27,1.7)
+  )
+
+);
+
+$--navbar: (
+  height: 70px,
+  background-color: _get($--main, 'body-color'),
+  color: _get($--main, 'body-background-color')
+);
+
+$--panels: (
+  base-background-color: _get($--colors, 'gray'),
+  border-radius: 4px,
+  box-shadow: 'none',
+  // panel--header
+  header-height: 4rem,
+  header-horizontal-padding: (1.5rem, 2rem, 2.5rem, 3.5rem, 4.5rem),
+  header-background-color: _get($--colors, 'gray'),
+  header-color: _get($--colors, 'yellow'),
+  header-box-shadow: 0 -2px 0 0 _get($--colors, 'lt-gray') inset,
+  header-font: 'display',
+  header-font-size: (0.8em, 1em, 1.33em, 1.5em, 1.75em),
+  // panel--item-title
+  item-title-height: 3rem,
+  item-title-color: _get($--colors, 'gray'),
+  item-title-box-shadow: 0 -1px 0 0 darken(_get($--colors, 'lt-gray'), 5%) inset,
+  item-title-background-color: _get($--colors, white),
+  item-title-horizontal-padding: (1.5rem, 2rem, 2.5rem, 3.5rem, 4.5rem),
+  item-title-font: 'display',
+  item-title-font-size: 1.1em,
+  // panel--item
+  item-color: inherit,
+  item-background-color: _get($--colors, white),
+  item-vertical-padding: (1rem, 1.5rem, 2rem, 3rem, 4rem),
+  item-horizontal-padding: (1.5rem, 2rem, 2.5rem, 3.5rem, 4.5rem),
+  // panel--collapsible-body
+  collapsible-body-color: inherit,
+  collapsible-body-background-color: _get($--colors, 'white'),
+  collapsible-item-background-color: _get($--colors, 'white'),
+  // panel--collapsible item--title
+  collapsible-item-title-height: 3rem,
+  collapsible-item-title-color: _get($--colors, 'gray'),
+  collapsible-item-title-box-shadow: 0 -1px 0 0 darken(_get($--colors, 'lt-gray'), 5%) inset,
+  collapsible-item-title-background-color: _get($--colors, 'white'),
+  collapsible-item-title-horizontal-padding: (1.5rem, 2rem, 2.5rem, 3.5rem, 4.5rem),
+  collapsible-item-title-font: 'display',
+  collapsible-item-title-font-size: 1.1em,
+  // panel--collapsible item--title:hover
+  collapsible-item-title-hover-color: _get($--colors, 'black'),
+  collapsible-item-title-hover-box-shadow: (3px 0 0 0 _get($--colors, 'yellow') inset, 0 -1px 0 0 darken(_get($--colors, 'lt-gray'), 5%) inset),
+  collapsible-item-title-hover-background-color: _get($--colors, 'white'),
+  // panel--divider
+  divider-height: 1px,
+  divider-color: darken(_get($--colors, 'lt-gray'), 5%)
+);
+
+$--tables: (
+  item-vertical-padding: (0.33rem, 0.5rem, 1rem, 1.5rem, 2rem),
+  item-horizontal-padding: (0.5rem, 0.75rem, 1.25rem, 1.75rem, 2.5rem),
+  background-color: _get($--colors, white),
+  divider-color: darken(_get($--colors, 'lt-gray'), 5%)
+);
+
+$--notifications: (
+  types: (
+    info: (
+      icon-color: inherit
+    ),
+    success: (
+      icon-color: _get($--colors, 'green')
+    ),
+    warning: (
+      icon-color: _get($--colors, 'yellow')
+    ),
+    alert: (
+      icon-color: _get($--colors, "yellow")
+    ),
+    error: (
+      icon-color: _get($--colors, 'red')
+    )
+  )
+);

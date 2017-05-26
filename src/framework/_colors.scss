@@ -1,0 +1,21 @@
+//----------------------------------------------------------------------
+
+// Colors
+//
+// Colors are defined in config and can be accessed using the color(name) function.
+// Additional classes are added to quickly define text and background colors.
+
+@function color($name, $colors: $--colors) {
+  $c: _get($colors, $name);
+  @if $c == null { $c: $name };
+  @return $c;
+}
+
+// Give each color a unique color class
+@each $name, $hex in $--colors {
+  .color--#{$name} { color: $hex !important; }
+}
+// Give each color a unique bg class
+@each $name, $hex in $--colors {
+  .bg--#{$name} { background-color: $hex !important; }
+}

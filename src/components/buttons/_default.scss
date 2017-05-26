@@ -1,0 +1,41 @@
+.btn {
+
+  // Default color
+  cursor: pointer;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: lighten(black, 20%);
+  }
+
+  &:not(.btn--inline) {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &.btn--transparent {
+    background-color: rgba(white, 0);
+    color: inherit !important;
+  }
+
+  &.btn--sm {
+    line-height: 1.75;
+    min-height: 1.75em;
+    padding: 0 .5em;
+  }
+
+  // Default size (equivalent to btn--md)
+  line-height: 3;
+  min-height: 3em;
+  padding: 0 1em;
+
+  &.btn--lg {
+    line-height: 5;
+    min-height: 5em;
+    padding: 0 1.5em;
+  }
+
+}

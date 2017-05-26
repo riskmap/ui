@@ -1,0 +1,38 @@
+{
+  "name": "@themarshalsgroup/ui",
+  "version": "1.0.0",
+  "description": "Material design styles for The Marshals Group projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themarshalsgroup/ui.git"
+  },
+  "keywords": [
+    "ui",
+    "styles"
+  ],
+  "author": "Will Viles <will@vil.es>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/themarshalsgroup/ui/issues"
+  },
+  "homepage": "https://github.com/themarshalsgroup/ui#readme",
+  "files": [
+    "dist",
+    "src/**/*.scss"
+  ],
+  "style": "dist/main.css",
+  "sass": "src/main.scss",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "sassdash": "^0.8.2"
+  }
+}

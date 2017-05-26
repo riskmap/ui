@@ -1,0 +1,28 @@
+@mixin transition--fly-down($name: 'transition--fly-down', $speed: .5s) {
+
+  .#{$name}-enter {
+    transform: translateY(-100%);
+
+    &.#{$name}-enter-active {
+      transform: translateY(0%);
+      
+      transition-property: transform;
+      transition-duration: $speed;
+      transition-timing-function: ease('cubic', 'in-out');
+    }
+  }
+
+  .#{$name}-leave {
+    transform: translateY(0%);
+    &.#{$name}-leave-active {
+      transform: translateY(-100%);
+
+      transition-property: transform;
+      transition-duration: $speed;
+      transition-timing-function: ease('cubic', 'in-out');
+    }
+  }
+
+}
+
+@include transition--fly-down();
