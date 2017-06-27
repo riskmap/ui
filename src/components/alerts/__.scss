@@ -1,6 +1,6 @@
-$notification-types: _get($--notifications, 'types');
+$notification-types: _get($--alerts, 'types');
 
-.notifications--main, .notifications--footer {
+.alerts--main, .alerts--footer {
   position: fixed;
   z-index: 1998;
   .callout {
@@ -35,7 +35,7 @@ $notification-types: _get($--notifications, 'types');
   }
 }
 
-.notifications--main {
+.alerts--main {
   top: 1rem;
   right: 1rem;
 
@@ -76,7 +76,7 @@ $notification-types: _get($--notifications, 'types');
 
 }
 
-.notifications--footer {
+.alerts--footer {
   bottom: 0;
   left: 0;
 
@@ -87,61 +87,61 @@ $notification-types: _get($--notifications, 'types');
 
 }
 
-@keyframes notifications--fade-right-in {
+@keyframes alerts--fade-right-in {
   0% { transform: translateX(-1rem); opacity: 0; }
   100% { transform: translateX(0rem); opacity: 1; }
 }
 
-@keyframes notifications--fade-right-out {
+@keyframes alerts--fade-right-out {
   0% { transform: translateX(0rem); opacity: 1; }
   100% { transform: translateX(1rem); opacity: 0; }
 }
 
-@keyframes notifications--fade-down-in {
+@keyframes alerts--fade-down-in {
   0% { transform: translateY(-1rem); opacity: 0; }
   100% { transform: translateY(0rem); opacity: 1; }
 }
 
-@keyframes notifications--fade-down-out {
+@keyframes alerts--fade-down-out {
   0% { transform: translateY(0rem); opacity: 1; }
   100% { transform: translateY(-1rem); opacity: 0; }
 }
 
-@keyframes notifications--fade-up-in {
+@keyframes alerts--fade-up-in {
   0% { transform: translateY(1rem); opacity: 0; }
   100% { transform: translateY(0rem); opacity: 1; }
 }
 
-@keyframes notifications--fade-up-out {
+@keyframes alerts--fade-up-out {
   0% { transform: translateY(0rem); opacity: 1; }
   100% { transform: translateY(1rem); opacity: 0; }
 }
 
 // Animations
-.notifications--main {
+.alerts--main {
   .ember-notify-show {
-    animation: .5s notifications--fade-right-in ease('jump', 'out');
+    animation: .5s alerts--fade-right-in ease('jump', 'out');
   }
   .ember-notify-hide {
-    animation: .5s notifications--fade-right-out ease('jump', 'out');
+    animation: .5s alerts--fade-right-out ease('jump', 'out');
   }
 
   @include media-breakpoint-down('sm') {
     .ember-notify-show {
-      animation: .5s notifications--fade-down-in ease('jump', 'out');
+      animation: .5s alerts--fade-down-in ease('jump', 'out');
     }
     .ember-notify-hide {
-      animation: .5s notifications--fade-down-out ease('jump', 'out');
+      animation: .5s alerts--fade-down-out ease('jump', 'out');
     }
   }
 
 }
 
-.notifications--footer {
+.alerts--footer {
   .ember-notify-show {
-    animation: .5s notifications--fade-up-in ease('jump', 'out');
+    animation: .5s alerts--fade-up-in ease('jump', 'out');
   }
   .ember-notify-hide {
-    animation: .5s notifications--fade-up-out ease('jump', 'out');
+    animation: .5s alerts--fade-up-out ease('jump', 'out');
   }
 }

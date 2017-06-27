@@ -1,8 +1,8 @@
-$panel--collapsible-item-title-pad-h: _get($--panels, 'collapsible-item-title-horizontal-padding');
+$panel--collapsible-item-header-pad-h: _get($--panels, 'collapsible-item-header-horizontal-padding');
 
-.panel--collapsible {
+.collapsible {
 
-  .panel--collapsible-body {
+  .collapsible--body {
     overflow: hidden;
     color: _get($--panels, 'collapsible-body-color');
     background-color: _get($--panels, 'collapsible-body-background-color');
@@ -16,13 +16,13 @@ $panel--collapsible-item-title-pad-h: _get($--panels, 'collapsible-item-title-ho
     &:not(:last-of-type) {
       .panel--collapsible-body {
         &.cp-is-open {
-          border-bottom: 1px solid darken(color('lt-gray'), 5%);
+          // border-bottom: 1px solid darken(color('lt-gray'), 5%);
         }
       }
     }
   }
 
-  .panel--item-title {
+  .panel--item-header {
     i {
       transform: rotate(-90deg);
       transition: transform .2s ease('jump', 'out');
@@ -35,24 +35,24 @@ $panel--collapsible-item-title-pad-h: _get($--panels, 'collapsible-item-title-ho
     }
   }
 
-  .panel--item .panel--item-title {
-    height: _get($--panels, 'collapsible-item-title-height');
-    color: _get($--panels, 'collapsible-item-title-color');
-    background-color: _get($--panels, 'collapsible-item-title-background-color');
-    box-shadow: _get($--panels, 'collapsible-item-title-box-shadow');
-    @extend .font--#{_get($--panels, 'collapsible-item-title-font')};
-    font-size: _get($--panels, 'collapsible-item-title-font-size');
+  .panel--item .panel--item-header {
+    height: _get($--panels, 'collapsible-item-header-height');
+    color: _get($--panels, 'collapsible-item-header-color');
+    background-color: _get($--panels, 'collapsible-item-header-background-color');
+    box-shadow: _get($--panels, 'collapsible-item-header-box-shadow');
+    @extend .font--#{_get($--panels, 'collapsible-item-header-font')};
+    font-size: _get($--panels, 'collapsible-item-header-font-size');
 
-    &.padding--xs { padding: 0 nth($panel--collapsible-item-title-pad-h, 1); }
-    &.padding--sm { padding: 0 nth($panel--collapsible-item-title-pad-h, 2); }
-    &.padding--md { padding: 0 nth($panel--collapsible-item-title-pad-h, 3); }
-    &.padding--lg { padding: 0 nth($panel--collapsible-item-title-pad-h, 4); }
-    &.padding--xl { padding: 0 nth($panel--collapsible-item-title-pad-h, 5); }
+    &.padding--xs { padding: 0 nth($panel--collapsible-item-header-pad-h, 1); }
+    &.padding--sm { padding: 0 nth($panel--collapsible-item-header-pad-h, 2); }
+    &.padding--md { padding: 0 nth($panel--collapsible-item-header-pad-h, 3); }
+    &.padding--lg { padding: 0 nth($panel--collapsible-item-header-pad-h, 4); }
+    &.padding--xl { padding: 0 nth($panel--collapsible-item-header-pad-h, 5); }
 
     &:hover {
-      color: _get($--panels, 'collapsible-item-title-hover-color');
-      background-color: _get($--panels, 'collapsible-item-title-hover-background-color');
-      box-shadow: _get($--panels, 'collapsible-item-title-hover-box-shadow');
+      color: _get($--panels, 'collapsible-item-header-hover-color');
+      background-color: _get($--panels, 'collapsible-item-header-hover-background-color');
+      box-shadow: _get($--panels, 'collapsible-item-header-hover-box-shadow');
     }
 
   }

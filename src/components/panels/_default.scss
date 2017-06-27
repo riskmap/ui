@@ -1,6 +1,6 @@
 $panel--header-pad-h: _get($--panels, 'header-horizontal-padding');
 $panel--header-font-size: _get($--panels, 'header-font-size');
-$panel--item-title-pad-h: _get($--panels, 'item-title-horizontal-padding');
+$panel--item-header-pad-h: _get($--panels, 'item-header-horizontal-padding');
 $panel--item-pad-v: _get($--panels, 'item-vertical-padding');
 $panel--item-pad-h: _get($--panels, 'item-horizontal-padding');
 
@@ -8,9 +8,8 @@ $panel--item-pad-h: _get($--panels, 'item-horizontal-padding');
   background-color: _get($--panels, 'background-color');
   border-radius: _get($--panels, 'border-radius');
   overflow: hidden;
-  @extend .depth--#{_get($--panels, 'box-shadow')};
 
-  .panel--header, .panel--item .panel--item-title {
+  .panel--header, .panel--item .panel--item-header {
     display: flex;
     align-items: center;
     user-select: none;
@@ -44,19 +43,19 @@ $panel--item-pad-h: _get($--panels, 'item-horizontal-padding');
 
   }
 
-  .panel--item .panel--item-title {
-    height: _get($--panels, 'item-title-height');
-    color: _get($--panels, 'item-title-color');
-    background-color: _get($--panels, 'item-title-background-color');
-    box-shadow: _get($--panels, 'item-title-box-shadow');
-    @extend .font--#{_get($--panels, 'item-title-font')};
-    font-size: _get($--panels, 'item-title-font-size');
+  .panel--item .panel--item-header {
+    height: _get($--panels, 'item-header-height');
+    color: _get($--panels, 'item-header-color');
+    background-color: _get($--panels, 'item-header-background-color');
+    box-shadow: _get($--panels, 'item-header-box-shadow');
+    @extend .font--#{_get($--panels, 'item-header-font')};
+    font-size: _get($--panels, 'item-header-font-size');
 
-    &.padding--xs { padding: 0 nth($panel--item-title-pad-h, 1); }
-    &.padding--sm { padding: 0 nth($panel--item-title-pad-h, 2); }
-    &.padding--md { padding: 0 nth($panel--item-title-pad-h, 3); }
-    &.padding--lg { padding: 0 nth($panel--item-title-pad-h, 4); }
-    &.padding--xl { padding: 0 nth($panel--item-title-pad-h, 5); }
+    &.padding--xs { padding: 0 nth($panel--item-header-pad-h, 1); }
+    &.padding--sm { padding: 0 nth($panel--item-header-pad-h, 2); }
+    &.padding--md { padding: 0 nth($panel--item-header-pad-h, 3); }
+    &.padding--lg { padding: 0 nth($panel--item-header-pad-h, 4); }
+    &.padding--xl { padding: 0 nth($panel--item-header-pad-h, 5); }
 
     &.font-size--xs { font-size: nth($panel--header-font-size, 1); }
     &.font-size--sm { font-size: nth($panel--header-font-size, 2); }

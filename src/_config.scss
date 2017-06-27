@@ -151,14 +151,14 @@ $--panels: (
   header-box-shadow: 0 -2px 0 0 _get($--colors, 'lt-gray') inset,
   header-font: 'display',
   header-font-size: (0.8em, 1em, 1.33em, 1.5em, 1.75em),
-  // panel--item-title
-  item-title-height: 3rem,
-  item-title-color: _get($--colors, 'gray'),
-  item-title-box-shadow: 0 -1px 0 0 darken(_get($--colors, 'lt-gray'), 5%) inset,
-  item-title-background-color: _get($--colors, white),
-  item-title-horizontal-padding: (1.5rem, 2rem, 2.5rem, 3.5rem, 4.5rem),
-  item-title-font: 'display',
-  item-title-font-size: 1.1em,
+  // panel--item-header
+  item-header-height: 3rem,
+  item-header-color: _get($--colors, 'gray'),
+  item-header-box-shadow: 0 -1px 0 0 darken(_get($--colors, 'lt-gray'), 5%) inset,
+  item-header-background-color: _get($--colors, white),
+  item-header-horizontal-padding: (1.5rem, 2rem, 2.5rem, 3.5rem, 4.5rem),
+  item-header-font: 'display',
+  item-header-font-size: 1.1em,
   // panel--item
   item-color: inherit,
   item-background-color: _get($--colors, white),
@@ -169,17 +169,17 @@ $--panels: (
   collapsible-body-background-color: _get($--colors, 'white'),
   collapsible-item-background-color: _get($--colors, 'white'),
   // panel--collapsible item--title
-  collapsible-item-title-height: 3rem,
-  collapsible-item-title-color: _get($--colors, 'gray'),
-  collapsible-item-title-box-shadow: 0 -1px 0 0 darken(_get($--colors, 'lt-gray'), 5%) inset,
-  collapsible-item-title-background-color: _get($--colors, 'white'),
-  collapsible-item-title-horizontal-padding: (1.5rem, 2rem, 2.5rem, 3.5rem, 4.5rem),
-  collapsible-item-title-font: 'display',
-  collapsible-item-title-font-size: 1.1em,
+  collapsible-item-header-height: 3rem,
+  collapsible-item-header-color: _get($--colors, 'gray'),
+  collapsible-item-header-box-shadow: 0 -1px 0 0 darken(_get($--colors, 'lt-gray'), 5%) inset,
+  collapsible-item-header-background-color: _get($--colors, 'white'),
+  collapsible-item-header-horizontal-padding: (1.5rem, 2rem, 2.5rem, 3.5rem, 4.5rem),
+  collapsible-item-header-font: 'display',
+  collapsible-item-header-font-size: 1.1em,
   // panel--collapsible item--title:hover
-  collapsible-item-title-hover-color: _get($--colors, 'black'),
-  collapsible-item-title-hover-box-shadow: (3px 0 0 0 _get($--colors, 'yellow') inset, 0 -1px 0 0 darken(_get($--colors, 'lt-gray'), 5%) inset),
-  collapsible-item-title-hover-background-color: _get($--colors, 'white'),
+  collapsible-item-header-hover-color: _get($--colors, 'black'),
+  collapsible-item-header-hover-box-shadow: (3px 0 0 0 _get($--colors, 'yellow') inset, 0 -1px 0 0 darken(_get($--colors, 'lt-gray'), 5%) inset),
+  collapsible-item-header-hover-background-color: _get($--colors, 'white'),
   // panel--divider
   divider-height: 1px,
   divider-color: darken(_get($--colors, 'lt-gray'), 5%)
@@ -192,7 +192,7 @@ $--tables: (
   divider-color: darken(_get($--colors, 'lt-gray'), 5%)
 );
 
-$--notifications: (
+$--alerts: (
   types: (
     info: (
       icon-color: inherit
