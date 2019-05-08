@@ -1,4 +1,4 @@
-@themarshalsgroup/ui
+@riskmap/ui
 ======
 
-Material design styles for The Marshals Group projects.
+Material design styles for RiskMap projects.
